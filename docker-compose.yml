@@ -6,17 +6,6 @@ networks:
 
 services:
 
-  nginx:
-    build: 
-      context: nginx
-    networks: 
-      - appNET
-    tty: true
-    ports: 
-      - 5000:8080
-    depends_on: 
-      - productapi
-
   productapi:
     image: ${DOCKER_REGISTRY-}productapi
     container_name: ProductAPI
