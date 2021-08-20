@@ -1,0 +1,49 @@
+version: '3'
+
+networks: 
+  appNET:
+    driver: bridge
+
+services:
+
+  nginx:
+    build: 
+      context: nginx
+    networks: 
+      - appNET
+    tty: true
+    ports: 
+      - 5000:8080
+    depends_on: 
+      - productapi
+
+  productapi:
+    image: ${DOCKER_REGISTRY-}productapi
+    container_name: ProductAPI
+    build: 
+      context: ProductAPI
+      dockerfile: Dockerfile
+    networks:
+      - appNET
+    links:
+      - mongo-db
+    ports:
+      - 8080:80
+    tty: true
+    depends_on: 
+      - mongo-db
+
+  mongo-db:
+    image: mongo:5.0.2
+    container_name: mongo-db
+    restart: always
+    ports:
+      - 27017:27017
+      - 28017:28107
+    networks:
+      - appNET
+    environment:
+      - AUTH=no
+    volumes:
+      - ./mongo-db:/data/db   
+      
