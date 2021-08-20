@@ -16,7 +16,7 @@ https://github.com/fabioborges-ti/webapi.netcore-mongodb-docker-compose
 Antes de começar, você vai precisar ter instalado as seguintes ferramentas: [Git]([https://git-scm.com](https://git-scm.com/)) e o [Docker]([https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)). Além disto, sugiro que você também utilize um bom editor de código, como o [VSCode]([https://code.visualstudio.com/]  (https://code.visualstudio.com/)). Este vai te oferecer _muitas_ extensões que farão toda diferença.
 
 ### 📦 Dependências do projeto
-Abrir seu terminal na pasta da solução e execute o seguinte comando: 
+Abra seu terminal na pasta da solução e execute o seguinte comando: 
 
 ```bash
 $ dotnet restore
