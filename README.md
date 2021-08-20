@@ -42,7 +42,7 @@ productapi
 mongo:5.0.2
 ```
 
-Se estes foram listados, sucesso! 🤗 Já podemos fazer nossa primeira chamada da API. 
+Se estes foram listados, sucesso! 🤗 Já podemos fazer nossa primeira chamada da API. 🏃‍♀️ 🏃
 
 ### 📝 Documentação da API
 
